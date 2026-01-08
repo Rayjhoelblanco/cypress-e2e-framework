@@ -95,7 +95,3 @@ Enfoque profesional orientado a negocio
 Ray Blanco
 QA Analyst | QA Automation
 Enfoque en pruebas funcionales, automatización y calidad en entornos SaaS
-
-
-
-
