@@ -8,6 +8,10 @@ class CartPage {
   removeItem() {
     this.elements.removeBtn().click();
   }
+
+  getItems() {
+    return this.elements.cartItem();
+  }
 }
 
 export default new CartPage();

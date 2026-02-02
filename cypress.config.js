@@ -7,9 +7,9 @@ module.exports = defineConfig({
     viewportHeight: 720,
 
     setupNodeEvents(on, config) {
-      require("@cypress/grep/plugin")(config);
-      return config;
+      // implement node event listeners here
     }
   }
 });
 
+ 

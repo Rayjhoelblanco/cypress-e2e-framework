@@ -1,6 +1,6 @@
 import LoginPage from "../pages/LoginPage";
 
-describe("Login - SauceDemo", {tags: ["@smoke", "@regression"]}, () => {
+describe("Login - SauceDemo", { tags: ["@smoke", "@regression"]}, () => {
 
   it("Login exitoso con usuario válido", () => {
     cy.login("standard");
