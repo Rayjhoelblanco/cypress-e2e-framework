@@ -6,7 +6,7 @@ El objetivo del proyecto es demostrar **criterio técnico**, **estructura escala
 
 ---
 
-## 🚀 Stack Tecnológico
+## Stack Tecnológico
 
 - Cypress (E2E Testing)
 - JavaScript
@@ -16,7 +16,7 @@ El objetivo del proyecto es demostrar **criterio técnico**, **estructura escala
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 cypress/
@@ -36,7 +36,7 @@ cypress/
     ├── commands.js
     └── e2e.js
 
-🔐 Estrategia de Login
+Estrategia de Login
 Login por UI (cy.login())
 
 Utilizado para:
@@ -49,7 +49,7 @@ Implementado mediante Page Object Model.
 SauceDemo no posee una API real de autenticación.
 Por este motivo, el login por API se contempla a nivel conceptual, pero el flujo real utiliza UI.
 
-🧪 Tipos de Tests Implementados
+Tipos de Tests Implementados
 Smoke Tests
 
 Validan que el core del negocio esté operativo:
@@ -64,7 +64,7 @@ Simulan el comportamiento real del usuario:
 - Checkout completo
 - Confirmación de compra
 
-▶️ Ejecución del Proyecto
+Ejecución del Proyecto
 Instalación
 - npm install
 Abrir Cypress
@@ -74,14 +74,14 @@ ejecutar Somoke Tests
 Ejecutar Suite Completa 
 - npx cypress run 
 
-✅ Buenas Prácticas Aplicadas
+ Buenas Prácticas Aplicadas
 - Separación de responsabilidades (POM)
 - Datos desacoplados mediante fixtures
 - Custom commands reutilizables
 - Assertions funcionales (no visuales)
 - Decisiones técnicas basadas en contexto real
 
-🎯 Objetivo del Framework
+ Objetivo del Framework
 
 Este proyecto no busca cubrir todos los casos posibles, sino demostrar:
 - Capacidad de análisis
@@ -90,7 +90,7 @@ Este proyecto no busca cubrir todos los casos posibles, sino demostrar:
 
 Enfoque profesional orientado a negocio
 
-👤 Autor
+Autor
 
 Ray Blanco
 QA Analyst | QA Automation
