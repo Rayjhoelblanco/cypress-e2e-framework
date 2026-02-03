@@ -1,97 +1,108 @@
 # Cypress E2E Automation Framework – SauceDemo
 
-Framework de automatización **E2E** desarrollado con **Cypress**, aplicando buenas prácticas reales de QA Automation utilizadas en proyectos **SaaS / e-commerce**.
-
-El objetivo del proyecto es demostrar **criterio técnico**, **estructura escalable** y **decisiones conscientes** según el contexto del sistema bajo prueba.
+End-to-End (**E2E**) automation framework built with **Cypress**, applying real-world QA Automation best practices commonly used in **SaaS and e-commerce** projects.
 
 ---
 
-## Stack Tecnológico
+## Why this framework exists
+
+This framework is not intended to cover every possible test case.
+
+Its main goal is to ensure that **the core business flows remain stable** after changes, deployments, or fixes.
+
+It is designed for real-world contexts such as:
+- E-commerce platforms
+- SaaS products
+- Agile teams with CI/CD pipelines
+
+---
+
+## What does it validate?
+
+Smoke and Regression test suites focused on:
+
+- Functional login
+- Product navigation
+- Adding and removing products from the cart
+- End-to-end checkout flow
+
+---
+
+## Testing Strategy
+
+- **Smoke Tests**  
+  Quickly validate that the system is usable after changes.
+
+- **Regression Tests**  
+  Ensure that critical business flows are not broken by new features or fixes.
+
+- **End-to-End (E2E)**  
+  Simulate real user behavior from login to purchase confirmation.
+
+---
+
+## 🏗 Technical Architecture
 
 - Cypress (E2E Testing)
 - JavaScript
 - Page Object Model (POM)
-- Custom Commands (`Cypress.Commands`)
-- Fixtures para datos de prueba
+- Reusable Custom Commands
+- Fixtures for test data decoupling
 
 ---
 
-## Estructura del Proyecto
+## Project Structure
 
 ```text
 cypress/
-├── e2e/
-│   ├── login.cy.js        # Tests de login
-│   ├── cart.cy.js         # Tests de carrito
-│   └── checkout.cy.js    # Flujo E2E completo
-├── pages/
-│   ├── LoginPage.js
-│   ├── ProductsPage.js
-│   ├── CartPage.js
-│   └── CheckoutPage.js
-├── fixtures/
-│   ├── users.json
-│   └── checkout.json
-└── support/
-    ├── commands.js
-    └── e2e.js
+├─ e2e/
+│  ├─ login.cy.js
+│  ├─ cart.cy.js
+│  └─ checkout.cy.js
+├─ pages/
+│  ├─ LoginPage.js
+│  ├─ ProductsPage.js
+│  ├─ CartPage.js
+│  └─ CheckoutPage.js
+├─ fixtures/
+│  ├─ users.json
+│  └─ checkout.json
+├─ support/
+│  ├─ commands.js
+│  └─ e2e.js
 
-Estrategia de Login
-Login por UI (cy.login())
 
-Utilizado para:
--Tests funcionales de login
-- Validaciones de error
-- Sistemas sin API de autenticación (caso SauceDemo)
+## ▶️ How to run the project
 
-Implementado mediante Page Object Model.
-- cy.login("standard");
-SauceDemo no posee una API real de autenticación.
-Por este motivo, el login por API se contempla a nivel conceptual, pero el flujo real utiliza UI.
+### Install dependencies
+npm install
 
-Tipos de Tests Implementados
-Smoke Tests
+### Open Cypress UI
+npx cypress open
 
-Validan que el core del negocio esté operativo:
-- Login exitoso
-- Agregar producto al carrito
-- Eliminar producto del carrito
-- End-to-End (E2E)
+### Run Smoke Tests
+npx cypress run --env grepTags=@smoke
 
-Simulan el comportamiento real del usuario:
-- Login
-- Agregar productos
-- Checkout completo
-- Confirmación de compra
+### Run full suite
+npx cypress run
 
-Ejecución del Proyecto
-Instalación
-- npm install
-Abrir Cypress
-- npx cypress open 
-ejecutar Somoke Tests
-- npx cypress run --env grepTags=@somoke
-Ejecutar Suite Completa 
-- npx cypress run 
+## Good practices applied
 
- Buenas Prácticas Aplicadas
-- Separación de responsabilidades (POM)
-- Datos desacoplados mediante fixtures
-- Custom commands reutilizables
-- Assertions funcionales (no visuales)
-- Decisiones técnicas basadas en contexto real
+- Clear separation of responsibilities using POM
+- Test data decoupled via fixtures
+- Stable selectors using data-test
+- Functional assertions (not visual-based)
+- Technical decisions driven by business impact
 
- Objetivo del Framework
+Framework Goal
 
-Este proyecto no busca cubrir todos los casos posibles, sino demostrar:
-- Capacidad de análisis
-- Criterio técnico
-- Diseño mantenible
+This project does not aim to exhaustively test all scenarios, but to demonstrate:
+- Strong analytical thinking
+- Technical decision-making
+- Maintainable test design
+- Business-oriented QA mindset
 
-Enfoque profesional orientado a negocio
-
-Autor
-
+Author
 Ray Blanco
 QA Analyst | QA Automation
-Enfoque en pruebas funcionales, automatización y calidad en entornos SaaS
+Focused on functional testing, automation, and quality in SaaS environments.
